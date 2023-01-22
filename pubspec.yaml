@@ -1,5 +1,5 @@
 name: screen_corners
-description: Get the border radius of your screen
+description: Get how much the corners are rounded. All in a single, global, importable and easy singleton.
 version: 0.6.0
 repository: https://github.com/alekangelov/screen_corners
 
