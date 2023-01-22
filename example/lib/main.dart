@@ -3,7 +3,7 @@ import 'package:screen_corners/screen_corners.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await screenCorners.initScreenCorners();
+  await ScreenCorners.initScreenCorners();
   runApp(const ScreenCornersApp());
 }
 
@@ -22,7 +22,7 @@ class ScreenCornersApp extends StatelessWidget {
         ),
         body: Center(
           child: Text(
-            'Screen Corners: ${screenCorners.value}',
+            'Screen Corners: ${ScreenCorners.corner.value}',
             style: Theme.of(context).textTheme.headline4,
           ),
         ),

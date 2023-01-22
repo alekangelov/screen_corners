@@ -11,19 +11,19 @@
 Add this to your main.dart
 
 ```dart
-  void main() async {
-    WidgetsFlutterBinding.ensureInitialized();
-    await screenCorners.initScreenCorners();
-    runApp(const ScreenCornersApp());
-  }
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await ScreenCorners.initScreenCorners();
+  runApp(const ScreenCornersApp());
+}
 ```
 
 and then voila
 
 ```dart
-  SomeWidget(
-    borderRadius: screenCorners.value
-  )
+SomeWidget(
+  borderRadius: ScreenCorners.corner.value
+)
 ```
 
 ## Fin

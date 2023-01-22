@@ -1,6 +1,6 @@
 name: screen_corners
 description: Get the border radius of your screen
-version: 0.5.0
+version: 0.6.0
 repository: https://github.com/alekangelov/screen_corners
 
 environment:

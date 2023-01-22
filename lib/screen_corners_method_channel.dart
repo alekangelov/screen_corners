@@ -9,20 +9,21 @@ class MethodChannelScreenCorners extends ScreenCornersPlatform {
   @visibleForTesting
   final methodChannel = const MethodChannel('screen_corners');
 
-  var _value = 0.0;
+  var _value = CornerValue(value: 0.0);
 
   @override
-  Future<double?> initScreenCorners() async {
+  Future<CornerValue?> initScreenCorners() async {
     try {
-      _value = await methodChannel.invokeMethod('getScreenCorners');
+      final value = await methodChannel.invokeMethod('getScreenCorners');
+      _value = CornerValue(value: value);
       return _value;
     } catch (e) {
-      return 0;
+      return _value;
     }
   }
 
   @override
-  double getValue() {
+  CornerValue getValue() {
     return _value;
   }
 }

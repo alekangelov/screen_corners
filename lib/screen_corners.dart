@@ -1,11 +1,19 @@
 import 'screen_corners_platform_interface.dart';
 
 class ScreenCorners {
-  Future<double?> initScreenCorners() {
+  static final ScreenCorners _instance = ScreenCorners._internal();
+
+  factory ScreenCorners() {
+    return _instance;
+  }
+
+  ScreenCorners._internal();
+
+  static Future<CornerValue?> initScreenCorners() {
     return ScreenCornersPlatform.instance.initScreenCorners();
   }
 
-  double get value => ScreenCornersPlatform.instance.getValue();
-}
+  static CornerValue get corner => ScreenCornersPlatform.instance.getValue();
 
-final ScreenCorners screenCorners = ScreenCorners();
+  static double get cornerValue => corner.value;
+}
