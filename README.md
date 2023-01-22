@@ -2,6 +2,8 @@
 
 ## The easiest way to get your screen's border radius
 
+# NOTE: ONLY WORKING ON IOS CURRNETLY!
+
 <img src="https://raw.githubusercontent.com/alekangelov/screen_corners/main/screenshot.png">
 
 ### How to
